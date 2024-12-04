@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>eCommerce de Teléfonos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Encabezado y Navegación -->
+    <header>
+        <div class="logo">
+            <h1>Shop Mobile</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#productos">Inicio</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="#carrito">🛒 Carrito</a>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <h2>Descubre los últimos modelos de teléfonos</h2>
+        <p>Las mejores marcas a los mejores precios</p>
+        <a href="#productos" class="btn">Ver Productos</a>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="producto-lista">
+            <div class="producto">
+                <img src="iphone14.webp" alt="Teléfono 1">
+                <h3>iPhone 14</h3>
+                <p>$999</p>
+                <button class="btn">Añadir al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="s23.jpg" alt="Teléfono 2">
+                <h3>Samsung Galaxy S23</h3>
+                <p>$899</p>
+                <button class="btn">Añadir al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="xiaomi13.jpg" alt="Teléfono 3">
+                <h3>Xiaomi Mi 13</h3>
+                <p>$699</p>
+                <button class="btn">Añadir al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ofertas -->
+    <section id="ofertas" class="ofertas">
+        <h2>Ofertas Especiales</h2>
+        <p>Aprovecha descuentos de hasta el 50%</p>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Shop Mobile. Todos los derechos reservados.</p>
+            <ul>
+                <li><a href="#privacidad">Política de Privacidad</a></li>
+                <li><a href="#terminos">Términos de Uso</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

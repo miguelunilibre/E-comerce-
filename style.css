@@ -1,0 +1,141 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header .cart a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #34495e, #2c3e50);
+    color: white;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner .btn {
+    text-decoration: none;
+    background: #ffcc00;
+    color: #2c3e50;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Productos */
+.productos {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: white;
+}
+
+.productos h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.producto-lista {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.producto {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.producto h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.producto .btn {
+    background: #2c3e50;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ofertas */
+.ofertas {
+    padding: 2rem 1rem;
+    background: #ecf0f1;
+    text-align: center;
+}
+
+.ofertas h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Pie de página */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: #ffcc00;
+}
