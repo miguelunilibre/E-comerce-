@@ -27,35 +27,142 @@
         </nav>
     </header>
 
-    <section class="filtros-container">
-        <div class="buscador">
-            <input type="text" id="buscar" placeholder="Buscar teléfono...">
-            <i class="fa-solid fa-search"></i>
+    <section id="filtros" class="contenedor">
+        <div class="filtro-marca">
+            <label for="marca">Marca:</label>
+            <select id="marca" onchange="filtrarProductos()">
+                <option value="todos">Todos</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Huawei">Huawei</option>
+                <option value="Xiaomi">Xiaomi</option>
+                <option value="Motorola">Motorola</option>
+                <option value="OPPO">OPPO</option>
+                <option value="Apple">Apple</option>
+            </select>
         </div>
-        <div class="filtros">
-            <select id="marca">
-                <option value="">Todas las marcas</option>
-                <option value="samsung">Samsung</option>
-                <option value="iphone">iPhone</option>
-                <option value="huawei">Huawei</option>
-                <option value="xiaomi">Xiaomi</option>
-                <option value="motorola">Motorola</option>
-                <option value="oppo">OPPO</option>
-            </select>
-            <select id="precio">
-                <option value="">Todos los precios</option>
-                <option value="0-500000">$0 - $500.000</option>
-                <option value="500000-1000000">$500.000 - $1.000.000</option>
-                <option value="1000000+">Más de $1.000.000</option>
-            </select>
+        <div class="filtro-precio">
+            <label>Precio:</label>
+            <button onclick="filtrarPorPrecio('Bajo')">Menor de 500.000</button>
+            <button onclick="filtrarPorPrecio('Medio')">Mayor de 500.000</button>
+            <button onclick="filtrarPorPrecio('Alto')">Mayor de 1.000.000</button>
+            <button onclick="filtrarPorPrecio('Todos')">Todos</button>
+        </div>
+        <div class="filtro-nombre">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" oninput="filtrarPorNombre()" placeholder="Buscar por nombre...">
         </div>
     </section>
 
-    <section id="telefonos" class="contenedor">
-        <div class="contenedor-items" id="contenedor-telefonos">
-            <!-- Los teléfonos se cargarán aquí dinámicamente -->
+    <div id="modal-producto" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <div class="producto-detalle">
+                <div class="producto-imagen">
+                    <img src="" alt="" id="modal-imagen">
+                    <div class="miniaturas">
+                        <button onclick="setMini('0')">Vista Frontal</button>
+                        <button onclick="setMini('1')">Vista Lateral</button>
+                        <button onclick="setMini('2')">Vista Posterior</button>
+                    </div>
+                </div>
+                <div class="producto-info">
+                    <h2 id="modal-titulo"></h2>
+                    <p id="modal-descripcion"></p>
+                    <p id="modal-precio"></p>
+                    <div class="sizes">
+                        <h3>Capacidad de Almacenamiento:</h3>
+                        <button onclick="setSize('0')">128GB</button>
+                        <button onclick="setSize('1')">256GB</button>
+                        <button onclick="setSize('2')">512GB</button>
+                    </div>
+                    <button class="boton-item" onclick="agregarDesdeModal()">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="home" class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Samsung S24 ULTRA</span>
+                <img src="/img/S24.png" alt="" class="img-item">
+                <span class="precio-item">$1.000.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Huawei Pura70</span>
+                <img src="/img/PURA70.png" alt="" class="img-item">
+                <span class="precio-item">$2.000.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Xiaomi MixFlip</span>
+                <img src="/img/MIXFLIP.png" alt="" class="img-item">
+                <span class="precio-item">$3.000.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Samsung A05s</span>
+                <img src="/img/A05S.png" alt="" class="img-item">
+                <span class="precio-item">$180.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Xiaomi Note 12</span>
+                <img src="/img/NOTE_12_AZUL.png" alt="" class="img-item">
+                <span class="precio-item">$320.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Motorola Edge 50 Fusion</span>
+                <img src="/img/Edge_50_Pro_Negro-Eclipse_1000x1000px-01.png" alt="" class="img-item">
+                <span class="precio-item">$800.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">OPPO A40</span>
+                <img src="/img/OPPO.png" alt="" class="img-item">
+                <span class="precio-item">$540.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Apple IPHONE 16</span>
+                <img src="/img/IP16.png" alt="" class="img-item">
+                <span class="precio-item">$5.020.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item" onclick="mostrarDetalleProducto(this)">
+                <span class="titulo-item">Apple IPHONE 15</span>
+                <img src="/img/IP16.png" alt="" class="img-item">
+                <span class="precio-item">$4.720.000</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+                <button class="btn-cerrar-carrito">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="carrito-items">
+            
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
         </div>
     </section>
+    
+
     <footer>
         <p>Shop Mobile &copy; 2022</p>
     </footer>
