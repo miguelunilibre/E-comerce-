@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles/estilo.css">
+    <link rel="stylesheet" href="/styles/telefonos.css">
+    <script src="/scripts/telefonos.js" defer></script>
+    <title>Teléfonos | Shop Mobile</title>
+</head>
+<body>
+    <header>
+        <h1>| Shop Mobile |</h1>
+        <nav>
+            <ul class="menu-principal">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="telefonos.html">Teléfonos</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.html">Acerca de Nosotros</a></li>
+            </ul>
+            <ul class="menu-login">
+                <li><a href="login.html"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
+                <li><a href="#" id="carrito-btn"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="filtros-container">
+        <div class="buscador">
+            <input type="text" id="buscar" placeholder="Buscar teléfono...">
+            <i class="fa-solid fa-search"></i>
+        </div>
+        <div class="filtros">
+            <select id="marca">
+                <option value="">Todas las marcas</option>
+                <option value="samsung">Samsung</option>
+                <option value="iphone">iPhone</option>
+                <option value="huawei">Huawei</option>
+                <option value="xiaomi">Xiaomi</option>
+                <option value="motorola">Motorola</option>
+                <option value="oppo">OPPO</option>
+            </select>
+            <select id="precio">
+                <option value="">Todos los precios</option>
+                <option value="0-500000">$0 - $500.000</option>
+                <option value="500000-1000000">$500.000 - $1.000.000</option>
+                <option value="1000000+">Más de $1.000.000</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="telefonos" class="contenedor">
+        <div class="contenedor-items" id="contenedor-telefonos">
+            <!-- Los teléfonos se cargarán aquí dinámicamente -->
+        </div>
+    </section>
+    <footer>
+        <p>Shop Mobile &copy; 2022</p>
+    </footer>
+</body>
+</html>
