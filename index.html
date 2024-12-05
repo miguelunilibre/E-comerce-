@@ -1,11 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/estilo.css">
+    <link rel="stylesheet" href="styles/estilodeform.css">
+    <link rel="icon" href="img/Shop Mobil  icono.png" type="image/png">
+    <script src="scripts/app.js" async></script>
+    <title>| Shop Mobile | </title>
 </head>
 <body>
-    
+    <header>
+        <h1>| Shop Mobile |</h1>
+        <nav>
+            <ul class="menu-principal">
+              .  <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/telefonos.html">Telefonos</a></li>
+                <li><a href="pages/contact.html">Contacto</a></li>
+                <li><a href="pages/about.html">Acerca de Nosotros</a></li>
+            </ul>
+            <ul class="menu-login">
+                <li><a href="pages/login.html"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
+                <li><a href="#" id="carrito-btn"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav id="nav">
+        <div class="navBottom">
+            <h3 class="menuItem"> DESCUENTO - DESCUENTO - DESCUENTO - DESCUENTO - DESCUENTO - DESCUENTO -DESCUENTO - DESCUENTO- DESCUENTO - DESCUENTO </h3>
+        </div>
+    </nav>
+    <div class="slider">
+        <div class="sliderWrapper">
+            <div class="sliderItem">
+                <img src="./img/121032-iphone-16-pro-max.png" alt="" class="sliderImg" width="650">
+                <div class="sliderBg"></div>
+                <h1 class="sliderTitle">IPHONE 16 PRO MAX</h1>
+                <h2 class="sliderPrice">$5.990.000</h2>
+                <a href="#product">
+                    <button class="buyButton">COMPRAR AHORA!</button>
+                </a>
+            </div>
+           
+           
+        </div>
+    </div>
+   
+    <div class="features">
+        <div class="feature">
+            <img src="./img/shipping.png" alt="" class="featureIcon">
+            <span class="featureTitle">ENVIO GRATIS</span>
+            <span class="featureDesc">ENVIO GRATIS A TODACOLOMBIA.</span>
+        </div>
+        <div class="feature">
+            <img class="featureIcon" src="./img/return.png" alt="">
+            <span class="featureTitle">GARANTIA DE 30 DIAS</span>
+            <span class="featureDesc">SI NO ES LO QUE ESPERABAS TE DEVOLVEMOS TU DINERO</span>
+        </div>
+        
+        <div class="feature">
+            <img class="featureIcon" src="./img/contact.png" alt="">
+            <span class="featureTitle">SOPORTE!</span>
+            <span class="featureDesc">EQUIPO DE SOPORTE PARA TI 24/7.</span>
+        </div>
+    </div>S
+
+    <div class="product" id="product">
+        <img src="./img/121032-iphone-16-pro-max.png" alt="" class="productImg">
+        <div class="productDetails">
+            <h1 class="productTitle">IPHONE 16 PRO MAX</h1>
+            <h2 class="productPrice">$5.990.000</h2>
+            <p class="productDesc">EL IMPONENTE DISEÑO DE TITANIO — El iPhone 16 Pro Max tiene un diseño de titanio resistente y liviano.</p>
+            <button class="productButton">COMPRAR AHORA!</button>
+            <div class="colors">
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            
+            <div class="sizes">
+                <div class="size">256 GB</div>
+                <div class="size">512 GB</div>
+                <div class="size">1024 GB</div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    <div class="gallery">
+        <div class="galleryItem">
+            <h1 class="galleryTitle">IPHONE 16 PRO MAX</h1>
+            <img src="img/16DORADO.png"
+                alt="" class="galleryImg">
+        </div>
+        <div class="galleryItem">
+            <img src="img/S24.png"
+                alt="" class="galleryImg">
+            <h1 class="galleryTitle">Samsung S24 ULTRA</h1>
+        </div>
+        <div class="galleryItem">
+            <h1 class="galleryTitle">Huawei PURA 70</h1>
+            <img src="img/PURA70.png"
+                alt="" class="galleryImg">
+        </div>
+    </div>
+
+    <section id="contacto-info" class="contenedor">
+        <div class="contacto-grid">
+            <div class="contacto-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Ubicación</h3>
+                <p class="metodo-descripcion">Calle Principal #123, Ciudad</p>
+            </div>
+            <div class="contacto-item">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Teléfono</h3>
+                <p class="metodo-descripcion">+57 123 456 7890</p>
+            </div>
+            <div class="contacto-item">
+                <i class="fa-solid fa-envelope"></i>
+                <h3>Email</h3>
+                <p class="metodo-descripcion">info@shopmobile.com</p>
+            </div>
+            <div class="contacto-item">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Horario</h3>
+                <p class="metodo-descripcion">Lun - Sáb: 9:00 - 18:00</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="metodos-pago" class="contenedor">
+        <div class="metodos-pago-header">
+            <h2>Métodos de Pago Aceptados</h2>
+            <p class="metodos-descripcion">Ofrecemos múltiples opciones seguras para tu comodidad</p>
+        </div>
+        <div class="metodos-pago-grid">
+            <div class="metodo-pago-item">
+                <i class="fa-brands fa-cc-visa"></i>
+                <span>Visa</span>
+                <p class="metodo-descripcion">Sin cargos adicionales</p>
+            </div>
+            <div class="metodo-pago-item">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <span>Mastercard</span>
+                <p class="metodo-descripcion">Pago en cuotas disponible</p>
+            </div>
+            <div class="metodo-pago-item">
+                <i class="fa-brands fa-cc-paypal"></i>
+                <span>PayPal</span>
+                <p class="metodo-descripcion">Pago seguro internacional</p>
+            </div>
+            <div class="metodo-pago-item">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>PSE</span>
+                <p class="metodo-descripcion">Transferencia bancaria directa</p>
+            </div>
+            <div class="metodo-pago-item">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Nequi</span>
+                <p class="metodo-descripcion">Pago inmediato desde tu celular</p>
+            </div>
+            <div class="metodo-pago-item">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <span>Efectivo</span>
+                <p class="metodo-descripcion">Pago contra entrega</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Shop Mobile &copy; 2024</p>
+        <img src="img/Shop Mobil  icono.png" alt="Shop Mobile Logo" width="100">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
