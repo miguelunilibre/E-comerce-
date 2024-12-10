@@ -1,0 +1,185 @@
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+.contenedor {
+    max-width: 1400px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Estilos de la Sección de Contacto */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contacto-item {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacto-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.contacto-item::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    opacity: 0.1;
+    transition: top 0.3s ease;
+}
+
+.contacto-item:hover::before {
+    top: 0;
+}
+
+.contacto-item i {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.contacto-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contacto-item .metodo-descripcion {
+    color: var(--text-color);
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Estilos de Métodos de Pago */
+#metodos-pago {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: white;
+    margin-top: 0px;
+}
+
+.metodos-pago-header {
+    text-align: center;
+    margin-bottom: -30px;
+    width: 100%;
+}
+
+.metodos-pago-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.metodos-descripcion {
+    color: var(--text-color);
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.metodos-pago-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.metodo-pago-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.metodo-pago-item:hover {
+    transform: translateY(-5px);
+}
+
+.metodo-pago-item::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    opacity: 0.1;
+    transition: top 0.3s ease;
+}
+
+.metodo-pago-item:hover::before {
+    top: 0;
+}
+
+.metodo-pago-item i {
+    font-size: 2.5em;
+    color: var(--accent-color);
+}
+
+.metodo-pago-item span {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.metodo-descripcion {
+    font-size: 0.8em;
+    color: var(--text-color);
+    margin-top: 8px;
+    opacity: 0.8;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+@media screen and (max-width: 1024px) {
+    .contenedor {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .contacto-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}

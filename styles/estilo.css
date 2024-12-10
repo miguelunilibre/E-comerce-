@@ -433,6 +433,117 @@ nav ul li a:hover::after {
     color: #666;
 }
 
+/* Estilos para el Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido {
+    background-color: #ffebc1;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: inset 0 0 20px 10px rgba(255,255,255,.4), 0px 0 10px 0 #000;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+}
+
+.cerrar-modal {
+    color: #000;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.producto-detalle {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+
+.producto-imagen {
+    width: 40%;
+    text-align: center;
+}
+
+.producto-imagen img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.producto-info {
+    width: 60%;
+}
+
+.producto-info h2 {
+    color: #45409c;
+    margin-bottom: 20px;
+    font-family: "DM Serif Display";
+    font-size: 24px;
+}
+
+.producto-info p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.miniaturas button, 
+.sizes button {
+    background-color: #fff0ce;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.miniaturas button:hover, 
+.sizes button:hover {
+    background-color: #fdc20c;
+}
+
+.boton-item {
+    width: auto;
+    background-color: #000;
+    color: #fdc20c;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Responsive del modal */
+@media screen and (max-width: 768px) {
+    .producto-detalle {
+        flex-direction: column;
+    }
+    
+    .producto-imagen,
+    .producto-info {
+        width: 100%;
+    }
+    
+    .modal-contenido {
+        margin: 10% auto;
+        width: 95%;
+    }
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 1024px) {
     .contenedor {
@@ -502,12 +613,80 @@ nav ul li a:hover::after {
     }
 }
 
+#filtros {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.filtro-marca, .filtro-precio, .filtro-nombre {
+    display: flex;
+    align-items: center;
+}
+
+.filtro-marca label, .filtro-precio label, .filtro-nombre label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filtro-marca select, .filtro-nombre input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filtro-precio button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.filtro-precio button:hover {
+    background-color: #0056b3;
+}
+
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 45px 0;
+    margin-top: 20px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer img {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+footer .social-icons {
+    margin: 10px 0;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: var(--accent-color);
 }
 
 .fa-cart-shopping {
