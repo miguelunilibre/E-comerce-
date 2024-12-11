@@ -169,11 +169,7 @@ function pagarClicked(){
                 <p><strong>Detalles de Pago:</strong> ${paymentDetails}</p>
                 <p><strong>Número de Orden:</strong> ${orderNumber}</p>
             </div>
-<<<<<<< HEAD
             <button onclick="window.location.href='/index.html'">Volver a Inicio</button>
-=======
-            <button onclick="window.location.href='index.html'">Volver a Inicio</button>
->>>>>>> f5451dc11cfaf3e866703aebb1130a4881eaf8c0
         </div>
     `;
 
@@ -311,7 +307,6 @@ function actualizarTotalCarrito(){
     for(var i=0; i< carritoItems.length;i++){
         var item = carritoItems[i];
         var precioElemento = item.getElementsByClassName('carrito-item-precio')[0];
-<<<<<<< HEAD
         // Limpiamos el string de precio quitando '$' y puntos de miles
         var precio = parseFloat(precioElemento.innerText.replace('$','').replace(/\./g, ''));
         var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
@@ -322,19 +317,6 @@ function actualizarTotalCarrito(){
 
     // Formatear el total con separadores de miles
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es-CO") + ",00";
-=======
-        //quitamos el símbolo peso y el punto de milesimos.
-        var precio = parseFloat(precioElemento.innerText.replace('$','').replace('.',''));
-        var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
-        console.log(precio);
-        var cantidad = cantidadItem.value;
-        total = total + (precio * cantidad);
-    }
-    total = Math.round(total * 100)/100;
-
-    document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
-
->>>>>>> f5451dc11cfaf3e866703aebb1130a4881eaf8c0
 }
 
 //Funciones para el manejo de miniaturas y tamaños
